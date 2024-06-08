@@ -1,4 +1,4 @@
-name: 🚀 Publish
+name: 🚀
 on:
   push:
     branches:
@@ -32,8 +32,8 @@ jobs:
         env:
           TAG_NAME: ${{ github.event.release.tag_name }}
         run: pnpm version ${TAG_NAME} --no-git-tag-version 
-        
+
       - name: 🚀 Ship
-        run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm publish --access public --no-git-checks
