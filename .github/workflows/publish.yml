@@ -36,6 +36,7 @@ jobs:
         run: pnpm version ${TAG_NAME} --no-git-tag-version 
 
       - name: 🚀 Ship
+        shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --access public --no-git-checks
