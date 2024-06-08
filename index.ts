@@ -87,3 +87,5 @@ export type scene = {
     blocks: (child)[]
     toggle?: button | div
 }
+
+export type hello = "world"
