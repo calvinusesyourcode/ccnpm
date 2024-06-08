@@ -1,5 +1,5 @@
 {
-    "name": "creative-capital",
+    "name": "@calvinusesyourcode/creative-capital",
     "license": "MIT",
     "version": "0.0.1",
     "main": "dist/index.js",
