@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 20.x
           cache: "pnpm"
-          registry-url: https://registry.npmjs.org
+          registry-url: "https://registry.npmjs.org"
 
       - name: 📦 Install dependencies
         run: pnpm install --frozen-lockfile
@@ -41,14 +41,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: 🧪 Test
-        shell: bash
-        run: echo "${NODE_AUTH_TOKEN}"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: 🚀 Ship
         shell: bash
         run: pnpm publish --access public --tag latest
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
