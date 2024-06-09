@@ -1,7 +1,7 @@
 {
     "name": "@calvinusesyourcode/ccnpm",
     "license": "MIT",
-    "version": "0.0.1",
+    "version": "2024.06.08",
     "main": "dist/index.js",
     "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
