@@ -1,5 +1,5 @@
 {
-    "name": "@calvinusesyourcode/ccnpm",
+    "name": "@calvinusesyourcode/types",
     "license": "MIT",
     "version": "2024.06.08",
     "main": "dist/index.js",
