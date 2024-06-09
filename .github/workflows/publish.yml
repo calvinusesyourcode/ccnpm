@@ -36,6 +36,6 @@ jobs:
         run: pnpm version ${TAG_NAME} --no-git-tag-version 
 
       - name: 🚀 Ship
-        run: pnpm publish --access=public
+        run: pnpm publish --access=public --tag=latest
         env:
           "npm_config_//registry.npmjs.org/:_authToken": ${{ secrets.NPM_TOKEN }}
