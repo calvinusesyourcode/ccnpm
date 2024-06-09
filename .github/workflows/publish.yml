@@ -35,12 +35,7 @@ jobs:
           TAG_NAME: ${{ github.event.release.tag_name }}
         run: pnpm version ${TAG_NAME} --no-git-tag-version 
 
-
-      - name: 🔧 Config
-        run: pnpm config set '//registry.npmjs.org/:_authToken' "${NODE_AUTH_TOKEN}"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: 🚀 Ship
-        shell: bash
         run: pnpm publish --access=public
+        env:
+          "npm_config_//registry.npmjs.org/:_authToken": ${{ secrets.NPM_TOKEN }}
