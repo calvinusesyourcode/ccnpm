@@ -1,13 +1,12 @@
 {
   "name": "@calvinusesyourcode/types",
   "license": "MIT",
-  "version": "2024.6.7",
+  "version": "2024.6.8",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
-    "push": "git add . && git commit -m ^ && git push",
     "lint": "tsc",
     "publish": "npm publish --access=public",
     "deploy": "npm run build && npm run lint && npm run push && npm run publish"
